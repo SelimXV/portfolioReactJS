@@ -4,9 +4,9 @@ const Hero = () => {
   return(
       <section className="hero-container">
         <div className="hero-content">
-          <h2> Je suis ??s</h2>
+          <h2> Je suis Sélim K</h2>
           <p>
-            Je suis un futur développeur web full-stack basé à Paris, France.
+            Futur développeur web full-stack basé à Paris, France.
             J'ai une passion pour le développement web et j'aime créer des sites web et des applications.
           </p>
         </div>
