@@ -1,0 +1,186 @@
+.nav-wrapper{
+    display: flex;
+    position: relative;
+    height: 90px;
+    line-height: 90px;
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+    padding: 0 30px;
+    backdrop-filter: blur(50px);
+}
+.nav-content{
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+
+
+}
+.nav-menu{
+
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+
+}
+.nav-logo{
+    position: absolute;
+    left: 0;
+    margin-left: 40px;
+
+
+}
+.nav-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: #8de7da;
+}
+.nav-logo span {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: #adf1f1;
+
+}
+.nav-content ul{
+    display: flex;
+    align-items:center;
+    gap: 0.5rem;
+    list-style: none;
+
+}
+.nav-content li {
+    margin: 0 1.5rem;
+
+}
+
+
+.nav-menu .nav-item{
+    list-style:none;
+    position: relative;
+}
+.menu-item{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    cursor: pointer;
+}
+.menu-item:before{
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 0.2rem;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    border-radius: 0.5rem;
+    bottom: -0.6rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s ease;
+}
+.menu-item:hover:before{
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.contact-btn{
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    padding: 0.6rem 2rem;
+    border: none;
+    outline: 1.5px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact-btn:hover{
+    color: #ffffff;
+    background: #7e61e7;
+    outline: 1.5px solid #a993fe;
+}
+.nav-menu-btn{
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.4rem;
+    color: #ffffff;
+    background: linear-gradient(90deg, #a993fe -0.13%, #7e61e7 99.87%);
+    line-height: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: none;
+}
+.nav-menu-btn:hover{
+    color: #a993fe;
+    background: #000;
+    border: 1px solid #a993fe;
+}
+
+@media (max-width: 940px){
+    .nav-menu-btn{
+        display : block;
+    }
+    .nav-content ul{
+        display: none;
+    }
+}
+@media (max-width: 1915px){
+    .nav-wrapper{
+        padding: 0 2rem;
+    }
+
+}
+
+/*<------ Dark Mode ------>*/
+.mode-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+
+}
+.mode-icon {
+    font-size: 1.5rem;
+    color: #0a0a0a;
+}
+.dark .mode-icon {
+    color: #ffffff;
+}
+.dark {
+    background: #2d2550;
+    color: #fff;
+    transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+.dark .menu-item {
+    color: #ffffff;
+}
+.dark .menu-name{
+    color: #ffffff;
+}
+.dark .contact-btn {
+    color: #fff;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+}
+
+.dark .contact-btn:hover {
+    color: #a993fe;
+    background: #000;
+    outline: 1.5px solid #a993fe;
+}
